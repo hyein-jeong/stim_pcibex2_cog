@@ -204,13 +204,11 @@ newTrial("instruct_1_1_day2_cognitivetask1",
 );
 
 ////////////////////////////////////  templates for category fluency task
-
 Template(GetTable("category.csv"),
-    ct =>
-    newTrial("("category.csv"),"
-    ,
-    defaultText
-        .print()
+    ct => 
+    newTrial("category",
+        defaultText
+            .print()
     ,
     newMediaRecorder("category_recorder", "audio")
         .hidden()
@@ -218,9 +216,9 @@ Template(GetTable("category.csv"),
         .log()    
     ,
     newText("category_name", ct .line1)
-        .size(800, 300)
         .css("background", "white")
         .center()
+        .bold()
         .print()
         .log()    
     ,
@@ -241,8 +239,8 @@ Template(GetTable("category.csv"),
         .stop()
         .remove()
         .log()
-    )
-    .log( "category", ct.line1 )
+
+).log( "category", ct.line1 )
 );
 
 
