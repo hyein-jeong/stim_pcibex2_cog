@@ -93,6 +93,10 @@ newTrial("cogtask_sample_fb",
       defaultText
           .print()
       ,
+
+      newText("<p> How difficult was the task to accomplish? </p>")
+          .print()
+      ,
       newImage("bad", "bad.png")
       ,
       newImage("good", "good.png")
@@ -108,6 +112,7 @@ newTrial("cogtask_sample_fb",
         .after( getText("right label") )
         .print()
         .wait()
+        .log()
 );
 
 Template(GetTable("intro_recorder.csv"),
