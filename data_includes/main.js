@@ -35,7 +35,8 @@ window.requestAnimationFrame( replaceUploadingMessage );
 // then send the results and finally show the trial labeled 'bye'
 
 
-Sequence("intro_ID",
+Sequence("cogtask",
+  "intro_ID",
 "consent_form",
 "initiate_recorder",
 "audio_check",
