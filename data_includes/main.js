@@ -93,9 +93,9 @@ newTrial("cogtask_sample_fb",
       defaultText
           .print()
       ,
-      newImage("bad", "ja.png")
+      newImage("bad", "bad.png")
       ,
-      newImage("good", "ya.png")
+      newImage("good", "good.png")
       ,
       newText("left label", "Bad")
         .before( getImage("bad") )
