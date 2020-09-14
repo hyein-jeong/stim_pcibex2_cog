@@ -47,15 +47,12 @@ Sequence("cogtask_sample",
 randomize ("category"),
 //"instruct_1_1_day2_cognitivetask2",
 //randomize ("spantask"),
-
 "send",
 "final");
 
 //start the recorder and send result files to the server
 
-Template (
-  cog_ospan =>
-  newTrial("cogtask",
+newTrial("cogtask",
       defaultText
           .print()
       ,
@@ -76,30 +73,23 @@ Template (
       newKey("space", " ")
              .log()
              .wait()
-)
 );
 
-
-Template (
-    cog_ospan_sample =>
-    newTrial("cogtask_sample",
-        defaultText
-            .print()
-        ,
-        newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html' target='_blank'>Click here to continue to the second cognitive task.</a></p>")
-            .print()
-        ,
-        newButton("I completed the task. (confirmation link for prolific will be added)")
-            .print()
-            .center()
-            .log()
-            .wait()
-)
+newTrial("cogtask_sample",
+      defaultText
+          .print()
+      ,
+      newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html' target='_blank'>Click here to continue to the second cognitive task.</a></p>")
+          .print()
+      ,
+      newButton("I completed the task. (confirmation link for prolific will be added)")
+          .print()
+          .center()
+          .log()
+          .wait()
 );
 
-Template (
-  cogtask_sample_fb =>
-  newTrial ("cogtask_sample_fb",
+newTrial("cogtask_sample_fb",
       defaultText
           .print()
       ,
@@ -118,7 +108,6 @@ Template (
         .after( getText("right label") )
         .print()
         .wait()
-  )
 );
 
 Template(GetTable("intro_recorder.csv"),
