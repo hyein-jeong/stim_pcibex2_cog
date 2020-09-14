@@ -50,6 +50,18 @@ randomize ("category"),
 "final");
 
 //start the recorder and send result files to the server
+
+Template (
+  cogtask =>
+  newTrial("cogtask",
+      defaultText
+          .print()
+      ,
+      newHtml("myHtml", "spantask.html")
+        .print()
+)
+);
+
 Template(GetTable("intro_recorder.csv"),
     ir =>
     InitiateRecorder("https://uni-potsdam.de/phraseproduction/exp2/upload-recording.php", ir.line1)
@@ -129,7 +141,7 @@ Template(GetTable("questionnaire.csv"),
         ,
         newText("line8", qu.line8)
             .after(getTextInput("Prolific_ID"))
-            .print() 
+            .print()
         ,
         newVar("ID")
             .global()
@@ -154,7 +166,7 @@ Template(GetTable("audio_check.csv"),
             .print()
         ,
         newText("line1", ac.line1)
-	     .bold()	
+	     .bold()
 	     .css("background", "white")
         ,
         newText("line2", ac.line2)
@@ -205,7 +217,7 @@ newTrial("instruct_1_1_day2_cognitivetask1",
 
 ////////////////////////////////////  templates for category fluency task
 Template(GetTable("category.csv"),
-    ct => 
+    ct =>
     newTrial("category",
         defaultText
             .print()
@@ -213,14 +225,14 @@ Template(GetTable("category.csv"),
     newMediaRecorder("category_recorder", "audio")
         .hidden()
         .record()
-        .log()    
+        .log()   
     ,
     newText("category_name", ct .line1)
         .css("background", "white")
         .center()
         .bold()
         .print()
-        .log()    
+        .log()
     ,
     newTimer("category_trial", 50000)
         .start()
