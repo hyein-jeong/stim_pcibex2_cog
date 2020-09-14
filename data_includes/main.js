@@ -1,4 +1,5 @@
-PennController.ResetPrefix(null);  // Initiates PennController
+PennController.ResetPrefix(null);
+// Initiates PennController
 
 var showProgressBar = true;
 //var progressBarText = "Fortschritt";
@@ -80,10 +81,11 @@ Template (
 
 
 Template (
-  cogtask_sample =>
-  newTrial("cogtask_sample",
-      defaultText
-          .print()
+    cogtask_sample =>
+    newTrial("cogtask_sample"
+        ,
+        defaultText
+            .print()
         ,
         newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html' target='_blank'>Click here to continue to the second cognitive task.</a></p>")
             .print()
