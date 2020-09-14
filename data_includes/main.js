@@ -35,7 +35,7 @@ window.requestAnimationFrame( replaceUploadingMessage );
 // then send the results and finally show the trial labeled 'bye'
 
 
-Sequence("cogtask",
+Sequence("cogtask_sample",
   "intro_ID",
 "consent_form",
 "initiate_recorder",
@@ -85,12 +85,16 @@ Template (
       defaultText
           .print()
         ,
-        newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html'>Click here to continue to the second cognitive task.</a></p>")
-          .print()
+        newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html' target='_blank'>Click here to continue to the second cognitive task.</a></p>")
+            .print()
         ,
-        newKey("space", " ")
-        	.log()
-          .wait()
+        newButton("continue", "Continue")
+            .print()
+        ,
+        newSelector("next")
+            .settings.add( getButton("continue") )
+            .settings.keys( " " )
+            .wait()
 )
 );
 
