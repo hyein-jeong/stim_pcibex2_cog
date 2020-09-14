@@ -37,12 +37,12 @@ window.requestAnimationFrame( replaceUploadingMessage );
 
 
 Sequence("cogtask_sample",
-  "intro_ID",
+"cogtask_sample_fb",
+"intro_ID",
 "consent_form",
 "initiate_recorder",
 "audio_check",
 "questionnaire",
-
 "instruct_1_1_day2_cognitivetask1",
 randomize ("category"),
 //"instruct_1_1_day2_cognitivetask2",
@@ -54,7 +54,7 @@ randomize ("category"),
 //start the recorder and send result files to the server
 
 Template (
-  cogtask =>
+  cog_ospan =>
   newTrial("cogtask",
       defaultText
           .print()
@@ -81,25 +81,45 @@ Template (
 
 
 Template (
-    cogtask_sample =>
-    newTrial("cogtask_sample"
-        ,
+    cog_ospan_sample =>
+    newTrial("cogtask_sample",
         defaultText
             .print()
         ,
         newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html' target='_blank'>Click here to continue to the second cognitive task.</a></p>")
             .print()
         ,
-        newButton("continue", "Continue")
+        newButton("I completed the task. (confirmation link for prolific will be added)")
             .print()
-        ,
-        newSelector("next")
-            .settings.add( getButton("continue") )
-            .settings.keys( " " )
+            .center()
+            .log()
             .wait()
 )
 );
 
+Template (
+  cogtask_sample_fb =>
+  newTrial ("cogtask_sample_fb",
+      defaultText
+          .print()
+      ,
+      newImage("bad", "ja.png")
+      ,
+      newImage("good", "ya.png")
+      ,
+      newText("left label", "Bad")
+        .before( getImage("bad") )
+      ,
+      newText("right label", "Good")
+        .after( getImage("good") )
+      ,
+      newScale("judgment", 5)
+        .before( getText("left label") )
+        .after( getText("right label") )
+        .print()
+        .wait()
+  )
+);
 
 Template(GetTable("intro_recorder.csv"),
     ir =>
