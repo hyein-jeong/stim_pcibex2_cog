@@ -57,6 +57,33 @@ Template (
   newTrial("cogtask",
       defaultText
           .print()
+      ,
+      newHtml("cogtask", "ospantask.html")
+              //.checkboxWarning("It is highly recommended that you check the '%name%' box before continuing")
+              //.radioWarning("Please consider selecting an option for '%name%'")
+              //.inputWarning("We would like you to type some text in these fields")
+              .print()
+      ,
+      newButton("I have completed the form")
+             .print()
+             .wait()
+             .remove()
+      ,
+      getHtml("cogtask")
+             .warn()
+      ,
+      newKey("space", " ")
+             .log()
+             .wait()
+)
+);
+
+
+Template (
+  cogtask_sample =>
+  newTrial("cogtask_sample",
+      defaultText
+          .print()
         ,
         newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html'>Click here to continue to the second cognitive task.</a></p>")
           .print()
@@ -65,7 +92,7 @@ Template (
         	.log()
           .wait()
 )
-);  
+);
 
 
 Template(GetTable("intro_recorder.csv"),
