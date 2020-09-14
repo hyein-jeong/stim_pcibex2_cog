@@ -57,11 +57,16 @@ Template (
   newTrial("cogtask",
       defaultText
           .print()
-      ,
-      newHtml("myHtml", "spantask.html")
-        .print()
+        ,
+        newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html'>Click here to continue to the second cognitive task.</a></p>")
+          .print()
+        ,
+        newKey("space", " ")
+        	.log()
+          .wait()
 )
-);
+);  
+
 
 Template(GetTable("intro_recorder.csv"),
     ir =>
