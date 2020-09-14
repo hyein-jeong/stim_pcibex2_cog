@@ -1,9 +1,0 @@
-session,subj,trialNr,phrase_item,noun,adj,itemNr,condition_phrFreq,condition_exposure,blocktype,category,phrase_practice,picture_file
-prac_ncblock,S01,1,burger_neu,burger,neu,no,prac,prac,ncblock,prac,burger_neu,burger_neu.png
-prac_ncblock,S01,2,tamburin_neu,tamburin,neu,no,prac,prac,ncblock,prac,tamburin_neu,tamburin_neu.png
-prac_ncblock,S01,3,lampe_alt,lampe,alt,no,prac,prac,ncblock,prac,lampe_alt,lampe_alt.png
-prac_ncblock,S01,4,pfeife_alt,peife,alt,no,prac,prac,ncblock,prac,pfeife_alt,pfeife_alt.png
-prac_ncblock,S01,5,nashorn_klein,nashorn,klein,no,prac,prac,ncblock,prac,nashorn_klein,nashorn_klein.png
-prac_ncblock,S01,6,badewanne_klein,badewanne,klein,no,prac,prac,ncblock,prac,badewanne_klein,badewanne_klein.png
-prac_ncblock,S01,7,tiger_gross,tiger,gross,no,prac,prac,ncblock,prac,tiger_gross,tiger_gross.png
-prac_ncblock,S02,8,zebra_gross,zebra,gross,no,prac,prac,ncblock,prac,zebra_gross,zebra_gross.png

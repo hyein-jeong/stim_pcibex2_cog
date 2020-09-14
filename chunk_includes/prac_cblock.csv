@@ -1,9 +1,0 @@
-session,subj,trialNr,phrase_item,noun,adj,itemNr,condition_phrFreq,condition_exposure,blocktype,category,phrase_practice,picture_file
-prac_cblock,S01,1,banana_gruen,banana,gruen,no,prac,prac,cblock,prac,banane_gruen,banane_gruen.png
-prac_cblock,S01,2,kamm_gruen,kamm,gruen,no,prac,prac,cblock,prac,kamm_gruen,kamm_gruen.png
-prac_cblock,S01,3,guitar_schwarz,guitar,schwarz,no,prac,prac,cblock,prac,guitar_schwarz,guitar_schwarz.png
-prac_cblock,S01,4,kaktus_schwarz,kaktus,schwarz,no,prac,prac,cblock,prac,kaktus_schwarz,kaktus_schwarz.png
-prac_cblock,S01,5,gabel_rot,gabel,rot,no,prac,prac,cblock,prac,gabel_rot,gabel_rot.png
-prac_cblock,S01,6,hammer_rot,hammer,rot,no,prac,prac,cblock,prac,hammar_rot,hammar_rot.png
-prac_cblock,S01,7,ballon_weiss,ballon,weiss,no,prac,prac,cblock,prac,ballon_weiss,ballon_weiss.png
-prac_cblock,S02,8,delfin_weiss,delfin,weiss,no,prac,prac,cblock,prac,delfin_weiss,delfin_weiss.png
