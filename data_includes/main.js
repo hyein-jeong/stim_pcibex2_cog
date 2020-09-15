@@ -47,7 +47,7 @@ randomize ("category"),
 "feedback",
 "instruct_1_1_day2_cognitivetask2",
 "cogtask_sample",
-"instruct_9_3_test_uploading"
+"instruct_9_3_test_uploading",
 "cogtask_sample_fb",
 "send",
 "final");
