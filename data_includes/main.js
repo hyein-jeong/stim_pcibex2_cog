@@ -45,7 +45,6 @@ Sequence(
 "instruct_1_1_day2_cognitivetask1",
 randomize ("category"),
 "feedback",
-"instruct_1_1_day2_cognitivetask2",
 "cogtask_sample",
 "instruct_9_3_test_uploading",
 "cogtask_sample_fb",
@@ -270,19 +269,6 @@ newTrial("instruct_1_1_day2_cognitivetask1",
 );
 
 
-newTrial("instruct_1_1_day2_cognitivetask2",
-    defaultText
-        .print()
-    ,
-    newImage("pic_instruct_1_1_day2_cognitivetask2", "instruct_1_1_day2_cognitivetask2.png")
-        .size(1280, 720)
-        .print()
-    ,
-    newKey("space", " ")
-	.log()
-        .wait()
-);
-
 newTrial("instruct_9_3_test_uploading",
     defaultText
         .print()
@@ -319,6 +305,7 @@ Template(GetTable("category.csv"),
         .css("background", "white")
         .center()
         .bold()
+        .settings.css("font-size", "28em")
         .print()
         .log()
     ,
