@@ -285,6 +285,9 @@ newTrial("instruct_9_3_test_uploading",
         .start()
         .wait()
         .log()
+    ,
+    getImage("pic_instruct_9_3_test_uploading")
+        .remove()
 );
 
 
