@@ -308,7 +308,7 @@ Template(GetTable("category.csv"),
         .css("background", "white")
         .center()
         .bold()
-        .settings.css("font-size", "18em")
+        .settings.css("font-size", "14em")
         .print()
         .log()
     ,
