@@ -36,8 +36,7 @@ window.requestAnimationFrame( replaceUploadingMessage );
 // then send the results and finally show the trial labeled 'bye'
 
 
-Sequence("cogtask_sample",
-"cogtask_sample_fb",
+Sequence(
 "intro_ID",
 "consent_form",
 "initiate_recorder",
@@ -45,8 +44,11 @@ Sequence("cogtask_sample",
 "questionnaire",
 "instruct_1_1_day2_cognitivetask1",
 randomize ("category"),
-//"instruct_1_1_day2_cognitivetask2",
-//randomize ("spantask"),
+"feedback",
+"instruct_1_1_day2_cognitivetask2",
+"cogtask_sample",
+"instruct_9_3_test_uploading"
+"cogtask_sample_fb",
 "send",
 "final");
 
@@ -79,10 +81,10 @@ newTrial("cogtask_sample",
       defaultText
           .print()
       ,
-      newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german_simple.html' target='_blank'>Click here to continue to the second cognitive task.</a></p>")
+      newText("<p><a href='https://hyein-jeong.github.io/cognitivetask/german/operation_span_web_german.html' target='_blank'> Klicken Sie hier, um mit der zweiten kognitiven Aufgabe fortzufahren. </a></p>")
           .print()
       ,
-      newButton("I completed the task. (confirmation link for prolific will be added)")
+      newButton("Klicken Sie hier, um die Ergebnisse zu senden. (confirmation link for prolific will be added)")
           .print()
           .center()
           .log()
@@ -93,8 +95,7 @@ newTrial("cogtask_sample_fb",
       defaultText
           .print()
       ,
-
-      newText("<p> How difficult was the task to accomplish? </p>")
+      newText("<p> Wie schwierig war die Aufgabe zu erfüllen? </p>")
           .print()
       ,
       newImage("bad", "bad.png")
@@ -267,6 +268,40 @@ newTrial("instruct_1_1_day2_cognitivetask1",
 	.log()
         .wait()
 );
+
+
+newTrial("instruct_1_1_day2_cognitivetask2",
+    defaultText
+        .print()
+    ,
+    newImage("pic_instruct_1_1_day2_cognitivetask2", "instruct_1_1_day2_cognitivetask2.png")
+        .size(1280, 720)
+        .print()
+    ,
+    newKey("space", " ")
+	.log()
+        .wait()
+);
+
+newTrial("instruct_9_3_test_uploading",
+    defaultText
+        .print()
+    ,
+    newImage("pic_instruct_9_3_test_uploading", "instruct_9_3_test_uploading.png")
+        .size(1280, 720)
+        .print()
+    ,
+    newKey("space", " ")
+	      .log()
+        .wait()
+    ,
+    newTimer("instruct_uploading", 2000)
+        .start()
+        .wait()
+        .log()
+);
+
+
 
 ////////////////////////////////////  templates for category fluency task
 Template(GetTable("category.csv"),
