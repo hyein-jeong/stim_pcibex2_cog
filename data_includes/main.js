@@ -63,9 +63,9 @@ newTrial("test",
 	 newTextInput("Gender")
 	 .size(100, 20)
 	 .log()
-	 ,getTextInput("Gender")
+	 ,
+	 getTextInput("Gender")
 	 .log()
-	 .wait()
 	 ,
 	 newKey("space", " ")
 	 .log()
