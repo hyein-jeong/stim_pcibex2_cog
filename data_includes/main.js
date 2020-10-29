@@ -57,13 +57,14 @@ newTrial("test",
 	 defaultText
 	 .print()
 	 ,
-	 newText("<p> Wie schwierig war die Aufgabe zu erfüllen? </p>")
-	 .print()
-	 ,
-	 newTextInput("Gender")
-	 .size(100, 20)
-	 .log()
-	 ,
+        newTextInput("Gender")
+            .size(100, 20)
+            .log()
+        ,
+        newText("<p> Wie schwierig war die Aufgabe zu erfüllen? </p>")
+            .after(getTextInput("Gender"))
+            .print()
+        ,
 	 getTextInput("Gender")
 	 .log()
 	 ,
@@ -72,6 +73,8 @@ newTrial("test",
          .wait()
 );
 	
+        
+		
 
 //start the recorder and send result files to the server
 
