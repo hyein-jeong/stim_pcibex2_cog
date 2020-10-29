@@ -36,7 +36,7 @@ window.requestAnimationFrame( replaceUploadingMessage );
 // then send the results and finally show the trial labeled 'bye'
 
 
-Sequence(
+Sequence("test",
 "intro_ID",
 "consent_form",
 "initiate_recorder",
@@ -50,6 +50,27 @@ randomize ("category"),
 "cogtask_sample_fb",
 "send",
 "final");
+
+
+
+newTrial("test",
+	 defaultText
+	 .print()
+	 ,
+	 newText("<p> Wie schwierig war die Aufgabe zu erfüllen? </p>")
+	 .print()
+	 ,
+	 newTextInput("Gender")
+	 .size(100, 20)
+	 .log()
+	 ,getTextInput(Gender)
+	 .log()
+	 .wait()
+	 ,
+	 newKey("space", " ")
+	 .log()
+         .wait()
+);
 
 //start the recorder and send result files to the server
 
